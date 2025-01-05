@@ -1,0 +1,16 @@
+.navbar {
+    width: 100vw;
+    background-color: cyan;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2rem;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
