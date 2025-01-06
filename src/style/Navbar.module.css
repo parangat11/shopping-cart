@@ -1,13 +1,13 @@
 .navbar {
     width: 100vw;
-    background-color: cyan;
+    background-color: #59ccc0;
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     font-size: 2rem;
     gap: 100px;
-    margin-bottom: 20px;
+    grid-column: 1 / 2;
 }
 
 .link {

@@ -10,7 +10,7 @@ export default function Card({ item, handleChange }) {
             </div>
             <div className={styles.title}>{item.title}</div>
             <div className={styles.price}>${item.price}</div>
-            <input type="number" value={item.qty} className={styles.qty} onChange={(e) => handleChange(e, item.id)} />
+            <input type="number" min={0} max={99} value={item.qty} className={styles.qty} onChange={(e) => handleChange(e, item.id)} />
         </div> 
     )
 }

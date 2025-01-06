@@ -21,6 +21,12 @@ div#root, html, body, :root, * {
   text-align: left;
 }
 
+div#root {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 8fr 0.5fr;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
