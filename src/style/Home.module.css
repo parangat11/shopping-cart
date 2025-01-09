@@ -4,6 +4,6 @@
     align-items: center;
     padding-top: 150px;
     padding-bottom: 150px;
+    align-self: stretch;
     font-size: 2rem;
-    background-color: #6bdcb2;
 }

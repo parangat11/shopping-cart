@@ -1,7 +1,72 @@
 .cart {
     color: black;
+    display: grid;
+    width: 90%;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .link {
-    color: blue;
+    color: rgb(15, 125, 165);
+    text-decoration: none;
+}
+
+.item, .col {
+    background-color: #59ccc0;
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.col > * {
+    justify-self: center;
+    align-self: center;
+}
+
+.item > * {
+    justify-self: center;
+    align-self: center;
+}
+
+.title-col {
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+}
+
+.image {
+    width: 200px;
+    height: 250px;
+}
+
+.total, .link {
+    justify-self: end;
+    padding-top: 20px;
+}
+
+.btn {
+    font-size: 1.6rem;
+    padding: 20px;
+    border: none;
+    background-color: #91e99d;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    color: black;
+    font-weight: bold;
+}
+
+.btn:active {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.empty {
+    font-size: 2rem;
 }

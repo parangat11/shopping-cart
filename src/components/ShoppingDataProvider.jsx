@@ -1,11 +1,18 @@
 import { useState, useEffect, useContext, createContext } from 'react'
 import PropTypes from 'prop-types'
 
-const Context = createContext()
+const Context = createContext({
+    data: [],
+    change: () => {},
+})
 const url = 'https://fakestoreapi.com/products'
 
 export const ShoppingDataProvider = ({children}) => {
-    const [result, setResult] = useState()
+    let localResult = null
+    if(localStorage.getItem("res")) {
+        localResult = (JSON.parse(localStorage.getItem("res")))
+    }
+    const [result, setResult] = useState(localResult)
     function handleChange(e, itemId) {
         console.log(e.target)
         const newItems = []
@@ -24,10 +31,7 @@ export const ShoppingDataProvider = ({children}) => {
         }
     }
     useEffect(() => {
-        if(localStorage.getItem("res")) {
-            setResult(JSON.parse(localStorage.getItem("res")))
-        }
-        else {
+        if(!localResult) {
             fetch(url)
                 .then((response) => response.json())
                 .then((response) => {
@@ -39,11 +43,6 @@ export const ShoppingDataProvider = ({children}) => {
                     setResult(res)
                 })
                 .catch((error) => console.log(error))
-        }
-    }, [])
-    useEffect(() => {
-        if(localStorage.getItem("res")) {
-            setResult(JSON.parse(localStorage.getItem("res")))
         }
     }, [])
     return (

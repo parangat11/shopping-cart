@@ -21,10 +21,23 @@ div#root, html, body, :root, * {
   text-align: left;
 }
 
+html, body {
+  height: 100%;
+}
+
 div#root {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 8fr 0.5fr;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #6bdcb2;
+}
+
+.outlet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 /* @media (prefers-color-scheme: light) {

@@ -7,10 +7,13 @@
     justify-content: flex-end;
     font-size: 2rem;
     gap: 100px;
-    grid-column: 1 / 2;
 }
 
 .link {
     color: white;
     text-decoration: none;
+}
+
+.icon {
+    padding-top: 5px;
 }

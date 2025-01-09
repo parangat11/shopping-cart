@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className={styles.navbar}>
             <Link className={styles.link} to="/">Home</Link>
             <Link className={styles.link} to="/shop">Shop</Link>
-            <Link className={styles.link} to="/cart">
+            <Link className={styles.link + " " + styles.icon} to="/cart">
                 <ShoppingCart size={50} />
             </Link>
         </div>
