@@ -6,9 +6,8 @@ import { CircleArrowLeft } from 'lucide-react';
 
 export default function Item() {
     const val = useParams()
-    const str = val.name
-    const itemId = str[str.length - 1]
     const items = (useResult()).data
+    const itemId = val.name.replace(/^\D+/g, ''); // Replace all leading non-digits with nothing
     let item = null
     for(let i = 0; i < items.length; i++) {
         if(items[i].id==itemId) {
