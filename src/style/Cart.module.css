@@ -54,12 +54,16 @@
 .btn {
     font-size: 1.6rem;
     padding: 20px;
+    margin-bottom: 20px;
     border: none;
     background-color: #91e99d;
     border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
     color: black;
     font-weight: bold;
+}
+
+.btn:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
 
 .btn:active {
